@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  perfect-pay-app:
+    build:
+      context: .
+      dockerfile: ___docker/Dockerfile
+    container_name: perfect-pay-app
+    restart: unless-stopped
+    volumes:
+      - .:/var/www
+    depends_on:
+      - perfect-pay-db
+      - perfect-pay-web
+    networks:
+      - perfect-pay-network
+
+  perfect-pay-web:
+    image: nginx:latest
+    container_name: perfect-pay-web
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www
+      - ./___docker/nginx:/etc/nginx/conf.d
+    networks:
+      - perfect-pay-network
+
+  perfect-pay-db:
+    image: mysql:5.7
+    container_name: perfect-pay-db
+    restart: unless-stopped
+    volumes:
+        - ./___docker/mysql:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    environment:
+        MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+        MYSQL_DATABASE: ${DB_DATABASE}
+        MYSQL_USER: ${DB_USERNAME}
+        MYSQL_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - perfect-pay-network
+
+
+networks:
+  perfect-pay-network:
+    driver: bridge
