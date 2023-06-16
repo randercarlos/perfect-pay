@@ -23,8 +23,10 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        $this->renderable(function (SaasException $e, $request) {
+            return response()->view('error', [
+                'error' => $e->getMessage()
+            ], 500);
         });
     }
 }
