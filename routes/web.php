@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ThanksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +16,6 @@ use App\Http\Controllers\PaymentController;
 |
 */
 
-Route::get('/checkout', CheckoutController::class);
-Route::post('/pay', PaymentController::class);
+Route::get('/checkout', CheckoutController::class)->name('checkout');
+Route::post('/pay', PaymentController::class)->name('pay');
+Route::get('/thanks', ThanksController::class)->name('thanks');
