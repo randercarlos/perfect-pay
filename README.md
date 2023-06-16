@@ -1,66 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h4 align="center">
+  🚀 Perfect Pay - Checkout de Pedidos - Desafio técnico
+</h4>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+ <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=7159c1&labelColor=000000" alt="PRs welcome!" />
+
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
 </p>
 
-## About Laravel
+<p align="center">
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-requisitos">Requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## :rocket: Tecnologias
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-## Learning Laravel
+- [PHP 8.2](https://php.net)
+- [Laravel 10](https://laravel.com)
+- [Docker](https://docker.com)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 💻 Projeto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Esse projeto é uma página de checkout para pagamento de pedidos feitos em Boleto, Cartão de Crédito ou PIX desenvolvida como teste técnico para o processo seletivo de Desenvolvedor PHP Sênior na Perfect Pay.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 💻 Funcionalidades
 
-### Premium Partners
+O sistema possui página de checkout, processamento de pagamento e página de obrigado:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Página de checkout para as informações de compra do cliente e dados de pagamento.
+- Processamento do pagamento por Boleto, Cartão de Crédito e PIX usando integrações com a API do Asaas 
+- Caso o processamento do pagamento ocorra com sucesso, página de Obrigado contendo o link para pagamento em boleto ou o QR Code para pagamento por PIX conforme tipo de pagamento selecionado.
+- Caso ocorra falha no processamento do pagamento, página de erro amigável.
 
-## Contributing
+## 📄 Requisitos
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* PHP 8.2+, Laravel 10+, MySQL 5.7+ e Docker
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## ⚙️ Instalação e execução
 
-## Security Vulnerabilities
+**Windows, OS X & Linux:**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Baixe o arquivo zip e o descompacte ou baixe o projeto para sua máquina através do git clone [https://github.com/randercarlos/perfect-pay.git](https://github.com/randercarlos/perfect-pay.git)
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Entre no prompt de comando e vá até a pasta do projeto:
+
+```sh
+cd ir-ate-a-pasta-do-projeto
+```
+
+- Crie o arquivo .env a partir do arquivo .env.example. As variáveis de ambiente relacionadas ao banco já estão configuradas.
+
+```sh
+copy .env.example .env
+```
+
+- Assumindo que tenha o docker instalado na máquina, para subir os containeres, execute o comando:
+
+```sh
+docker-compose up -d
+```
+
+- Após isso, execute o comando abaixo para instalar as dependências do laravel.
+
+```sh
+docker-compose exec perfect-pay-app composer install
+``` 
+
+- Após rodar o comando acima, basta acessar o endereço [http://localhost:8000/checkout](http://localhost:8000/checkout) para acessar a página de checkout.
+
+## 📝 Documentação
+
+- *Primeiramente*, para o sistema funcionar, é necessário ter uma API KEY para o ambiente de homologação(sandbox) do asaas. 
+- Vá no asaas, caso tenha conta. Caso não tenha, crie uma conta em https://sandbox.asaas.com/. Vá em Configuração de Conta->Integrações e gere o *API Key*.
+- Após isso, vá no arquivo *.env* e coloque-a na chave *ASAAS_API_KEY*. Pronto, o sistema está configurado. 
+- Ao acessar a página de checkout, preencher os dados conforme solicitados na tela.
+- Para o CPF, o sistema verifica se o mesmo é válido. Usar o site *https://www.geradordecpf.org/* para gerar um CPF válido ou um outro site qualquer.
+- Caso selecione a opção de pagamento em Cartão de Crédito, o sistema verifica se os dados do cartão são válidos. Usar o site *https://www.duplichecker.com/pt/credit-card-generator.php* para gerar dados válidos de cartão de crédito ou outro site qualquer.
+- Ao processar pagamentos por boleto, é exibido o link para pagamento do mesmo. Se o pagamento for por PIX, é exibido o QR Code e o link copia e cola. 
+
+
+Desenvolvido por Rander Carlos :wave: [Linkedin!](https://www.linkedin.com/in/rander-carlos-308a63a8//)
