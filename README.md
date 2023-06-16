@@ -43,7 +43,7 @@ O sistema possui página de checkout, processamento de pagamento e página de ob
 
 ## 📄 Requisitos
 
-* PHP 8.2+, Laravel 10+, MySQL 5.7+ e Docker
+* PHP 8.2+, Laravel 10+ e Docker
 
 
 ## ⚙️ Instalação e execução
@@ -83,7 +83,7 @@ docker-compose exec perfect-pay-app composer install
 
 - *Primeiramente*, para o sistema funcionar, é necessário ter uma API KEY para o ambiente de homologação(sandbox) do asaas. 
 - Vá no asaas, caso tenha conta. Caso não tenha, crie uma conta em https://sandbox.asaas.com/. Vá em Configuração de Conta->Integrações e gere o *API Key*.
-- Após isso, vá no arquivo *.env* e coloque-a na chave *ASAAS_API_KEY*. Pronto, o sistema está configurado. 
+- Após isso, vá no arquivo *.env* e coloque-a na chave *ASAAS_API_KEY* entre aspas simples para não dar erro. Pronto, o sistema está configurado. 
 - Ao acessar a página de checkout, preencher os dados conforme solicitados na tela.
 - Para o CPF, o sistema verifica se o mesmo é válido. Usar o site *https://www.geradordecpf.org/* para gerar um CPF válido ou um outro site qualquer.
 - Caso selecione a opção de pagamento em Cartão de Crédito, o sistema verifica se os dados do cartão são válidos. Usar o site *https://www.duplichecker.com/pt/credit-card-generator.php* para gerar dados válidos de cartão de crédito ou outro site qualquer.
