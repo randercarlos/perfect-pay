@@ -5,6 +5,7 @@
 return [
     'credit_card' => [
         'card_expiration_month_invalid' => 'O mês da data de expiração do cartão de crédito é inválido',
+        'card_expiration_year_invalid' => "O ano da data de expiração do cartão de crédito é inválido.",
         'card_invalid' => "Nº do cartão de crédito é inválido",
         'card_cvc_invalid' => "CVV do cartão de crédito é inválido",
     ],
