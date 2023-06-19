@@ -3,11 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use LVR\CreditCard\CardCvc;
-use LVR\CreditCard\CardExpirationMonth;
-use LVR\CreditCard\CardExpirationYear;
 use LVR\CreditCard\CardNumber;
 
 class PaymentRequest extends FormRequest
@@ -89,8 +86,6 @@ class PaymentRequest extends FormRequest
             ],
             "expiry" => [
                 'required_if:billingType,CREDIT_CARD',
-//                new CardExpirationMonth(Str::before($this->get('expiry'), '/')),
-//                new CardExpirationYear(Str::after($this->get('expiry'), '/'))
             ],
             "cvv" => [
                 'required_if:billingType,CREDIT_CARD',
@@ -141,7 +136,7 @@ class PaymentRequest extends FormRequest
     public function messages()
     {
         return [
-            'value.min' => "Valor da Compra deve ser igual ou maior que R$ 5,00"
+            'value.min' => "O campo Valor da Compra deve ser igual ou maior que R$ 5,00"
         ];
     }
 }
