@@ -96,6 +96,7 @@ docker-compose exec perfect-pay-app php artisan migrate
 - Para o CPF, o sistema verifica se o mesmo é válido. Usar o site *https://www.geradordecpf.org/* para gerar um CPF válido ou um outro site qualquer.
 - Caso selecione a opção de pagamento em Cartão de Crédito, o sistema verifica se os dados do cartão são válidos. Usar o site *https://www.duplichecker.com/pt/credit-card-generator.php* para gerar dados válidos de cartão de crédito ou outro site qualquer.
 - Ao processar pagamentos por boleto, é exibido o link para pagamento do mesmo. Se o pagamento for por PIX, é exibido o QR Code e o link copia e cola.
+- O sistema salva os dados do cliente, do pagamento e endereço. Caso o pagamento tenha sido feito por cartão de crédito, os dados do cartão não são armazenados por motivos de segurança.
 - As credenciais de acesso ao banco de dados para verificação dos dados salvos são:
 
 ```sh
